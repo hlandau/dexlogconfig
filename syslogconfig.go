@@ -11,11 +11,11 @@ import "github.com/coreos/go-systemd/journal"
 import "fmt"
 
 var (
-	syslogFacilityFlag  = cflag.String(flagGroup, "facility", "daemon", "syslog facility to use")
-	syslogFlag          = cflag.Bool(flagGroup, "syslog", false, "log to syslog?")
-	syslogSeverityFlag  = cflag.String(flagGroup, "syslogseverity", "DEBUG", "syslog severity limit")
-	journalFlag         = cflag.Bool(flagGroup, "journal", false, "log to systemd journal?")
-	journalSeverityFlag = cflag.String(flagGroup, "journalseverity", "DEBUG", "systemd journal severity limit")
+	syslogFacilityFlag  = cflag.String(flagGroup, "facility", "daemon", "Syslog facility to use")
+	syslogFlag          = cflag.Bool(flagGroup, "syslog", false, "Log to syslog?")
+	syslogSeverityFlag  = cflag.String(flagGroup, "syslogseverity", "DEBUG", "Syslog severity limit")
+	journalFlag         = cflag.Bool(flagGroup, "journal", false, "Log to systemd journal?")
+	journalSeverityFlag = cflag.String(flagGroup, "journalseverity", "DEBUG", "Systemd journal severity limit")
 )
 
 var facilities = map[string]syslog.Priority{
