@@ -72,5 +72,6 @@ func Init() {
 	openStderr()
 	openSyslog()
 	openJournal()
+	openEventLog()
 	openFile()
 }

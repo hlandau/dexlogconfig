@@ -112,3 +112,5 @@ func (s *journalSink) ReceiveFromChild(sev xlog.Severity, format string, params 
 var jsink = journalSink{
 	MinSeverity: xlog.SevDebug,
 }
+
+func openEventLog() {}
