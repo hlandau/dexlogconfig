@@ -10,7 +10,7 @@ import "fmt"
 
 var (
 	eventLogFlag         = cflag.Bool(flagGroup, "eventlog", false, "Log to event log?")
-	eventLogSeverityFlag = cflag.String(flagGroup, "eventlogseverity", "DEBUG", "Syslog severity limit")
+	eventLogSeverityFlag = cflag.String(flagGroup, "eventlogseverity", "DEBUG", "Event log severity limit")
 )
 
 func openEventLog() {
