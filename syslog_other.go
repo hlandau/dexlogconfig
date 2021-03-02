@@ -3,9 +3,9 @@
 package dexlogconfig
 
 import "github.com/hlandau/xlog"
+import "golang.org/x/sys/windows/svc/eventlog"
 import "gopkg.in/hlandau/easyconfig.v1/cflag"
 import "gopkg.in/hlandau/svcutils.v1/exepath"
-import "github.com/btcsuite/winsvc/eventlog"
 import "fmt"
 
 var (
