@@ -9,7 +9,7 @@ import "gopkg.in/hlandau/svcutils.v1/systemd"
 
 var (
 	flagGroup          = cflag.NewGroup(nil, "xlog")
-	logSeverityFlag    = cflag.String(flagGroup, "severity", "NOTICE", "Log severity (any syslog severity name or number)")
+	logSeverityFlag    = cflag.String(flagGroup, "severity", "NOTICE", "Log severity (from least to most verbose: emergency, alert, critical, error, warn, notice, info, debug, trace)")
 	logFileFlag        = cflag.String(flagGroup, "file", "", "Log to filename")
 	fileSeverityFlag   = cflag.String(flagGroup, "fileseverity", "TRACE", "File logging severity limit")
 	logStderrFlag      = cflag.Bool(flagGroup, "stderr", true, "Log to stderr?")
