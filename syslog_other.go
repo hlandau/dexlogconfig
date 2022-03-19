@@ -10,6 +10,7 @@ import "fmt"
 
 var (
 	eventLogFlag         = cflag.Bool(flagGroup, "eventlog", false, "Log to event log?")
+	eventLogNameFlag     = cflag.String(flagGroup, "eventlogname", "", "Event log source name (uses .exe program name if unset)")
 	eventLogSeverityFlag = cflag.String(flagGroup, "eventlogseverity", "DEBUG", "Event log severity limit")
 )
 
@@ -20,7 +21,12 @@ func openEventLog() {
 		return
 	}
 
-	pn := exepath.ProgramName
+	pn := eventLogNameFlag.Value()
+
+	if pn == "" {
+		pn = exepath.ProgramName
+	}
+
 	esink.Log, err = eventlog.Open(pn)
 	if err != nil {
 		return
